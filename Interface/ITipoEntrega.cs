@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Analise_de_Algoritmos_T1.Interface
 {
-    internal interface ITipoEntrega
+    public interface ITipoEntrega
     {
         string Modalidade { get; }
         double CalcularValorEntrega(double pesoTotalKg);

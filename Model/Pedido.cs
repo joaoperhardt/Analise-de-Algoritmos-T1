@@ -8,7 +8,7 @@ using Analise_de_Algoritmos_T1.Interface;
 
 namespace Analise_de_Algoritmos_T1.Model
 {
-    internal class Pedido
+    public class Pedido
     {
         private readonly List<Produto> _produtos;
         private ITipoEntrega _tipoEntrega;
