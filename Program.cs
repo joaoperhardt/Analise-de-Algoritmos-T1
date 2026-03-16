@@ -6,7 +6,7 @@ namespace Analise_de_Algoritmos_T1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Trabalho Parte 1");
         }
     }
 }
