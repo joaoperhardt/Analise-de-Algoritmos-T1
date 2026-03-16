@@ -9,24 +9,31 @@ namespace Analise_de_Algoritmos_T1.Model
 {
     internal class TipoEntregaSedex : ITipoEntrega
     {
+        public string Modalidade => "Sedex";
+
         public double CalcularValorEntrega(double pesoTotalKg)
         {
             if (pesoTotalKg <= 0.5)
-            {
                 return 12.50;
-            }
 
             if (pesoTotalKg <= 1)
-            {
                 return 20;
-            }
 
-            return 46.50 + CalcularValorAdicional(pesoTotalKg);
+            return CalcularValorAcimaDe1Kg(pesoTotalKg);
+        }
+
+        private double CalcularValorAcimaDe1Kg(double pesoTotalKg)
+        {
+            var valorBase = 46.50;
+            var valorAdicional = CalcularValorAdicional(pesoTotalKg);
+            return valorBase + valorAdicional;
         }
 
         private double CalcularValorAdicional(double pesoTotalKg)
         {
-            return ((pesoTotalKg - 1) / 0.1) * 1.5;
+            var pesoAdicionalKg = pesoTotalKg - 1;
+            var quantidadeCentenas = pesoAdicionalKg / 0.1;
+            return quantidadeCentenas * 1.5;
         }
     }
 }

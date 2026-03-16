@@ -9,6 +9,8 @@ namespace Analise_de_Algoritmos_T1.Model
 {
     internal class TipoEntregaRetiradaLocal : ITipoEntrega
     {
+        public string Modalidade => "Retirada no Local";
+
         public double CalcularValorEntrega(double pesoTotalKg)
         {
             return 0;

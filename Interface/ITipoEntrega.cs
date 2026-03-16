@@ -8,6 +8,7 @@ namespace Analise_de_Algoritmos_T1.Interface
 {
     internal interface ITipoEntrega
     {
-        double CalcularValorEntrega(double pesoTotal);
+        string Modalidade { get; }
+        double CalcularValorEntrega(double pesoTotalKg);
     }
 }
