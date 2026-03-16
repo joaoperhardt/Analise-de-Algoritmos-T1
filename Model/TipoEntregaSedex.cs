@@ -14,10 +14,14 @@ namespace Analise_de_Algoritmos_T1.Model
         public double CalcularValorEntrega(double pesoTotalKg)
         {
             if (pesoTotalKg <= 0.5)
+            {
                 return 12.50;
+            }
 
             if (pesoTotalKg <= 1)
+            {
                 return 20;
+            }
 
             return CalcularValorAcimaDe1Kg(pesoTotalKg);
         }
