@@ -7,7 +7,7 @@ using Analise_de_Algoritmos_T1.Interface;
 
 namespace Analise_de_Algoritmos_T1.Model
 {
-    internal class TipoEntregaSedex : ITipoEntrega
+    public class TipoEntregaSedex : ITipoEntrega
     {
         public string Modalidade => "Sedex";
 

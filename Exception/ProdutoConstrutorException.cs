@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Analise_de_Algoritmos_T1.Exception
 {
-    public class TipoEntregaIncompativelException : System.Exception
+    public class ProdutoConstrutorException : System.Exception
     {
-        public TipoEntregaIncompativelException(string message) : base(message) { }
+
+        public ProdutoConstrutorException(string message) :base(message) { } 
     }
 }

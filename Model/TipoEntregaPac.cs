@@ -8,7 +8,7 @@ using Analise_de_Algoritmos_T1.Interface;
 
 namespace Analise_de_Algoritmos_T1.Model
 {
-    internal class TipoEntregaPac : ITipoEntrega
+    public class TipoEntregaPac : ITipoEntrega
     {
         public string Modalidade => "PAC";
 
