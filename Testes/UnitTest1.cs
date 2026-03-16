@@ -2,6 +2,7 @@
 using Analise_de_Algoritmos_T1.Interface;
 using Analise_de_Algoritmos_T1.Model;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using NUnit.Framework;
 using Xunit;
 
 namespace Testes
