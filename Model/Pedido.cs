@@ -22,7 +22,9 @@ namespace Analise_de_Algoritmos_T1.Model
         public void AdicionarProduto(Produto produto)
         {
             if (produto == null)
+            {
                 throw new ArgumentNullException(nameof(produto));
+            }
 
             _produtos.Add(produto);
         }

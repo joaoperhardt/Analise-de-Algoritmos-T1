@@ -16,13 +16,15 @@ namespace Analise_de_Algoritmos_T1.Model
         public Produto(string nome, double valor, double pesoKg)
         {
             if (string.IsNullOrWhiteSpace(nome))
-                throw new ProdutoConstrutorException("Nome do produto é obrigatório");
+                throw new ArgumentException("Nome do produto é obrigatório");
+            
 
             if (valor < 0)
-                throw new ProdutoConstrutorException("Valor não pode ser negativo");
-
+                throw new ArgumentException("Valor não pode ser negativo");
+            
+    
             if (pesoKg < 0)
-                throw new ProdutoConstrutorException("Peso não pode ser negativo");
+                throw new ArgumentException("Peso não pode ser negativo");
 
             Nome = nome;
             Valor = valor;
