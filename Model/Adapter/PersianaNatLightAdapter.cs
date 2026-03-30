@@ -19,22 +19,18 @@ namespace Analise_de_Algoritmos_T1.Model.Adapter
 
         public void Abrir()
         {
-            // Garante que as palhetas estão abertas antes de erguer
             _persiana.AbrirPalheta();
             _persiana.SubirPalheta();
         }
 
         public void Fechar()
         {
-            // Desce as palhetas primeiro (se estiverem erguidas)
             _persiana.DescerPalheta();
-            // Depois fecha as palhetas
             _persiana.FecharPalheta();
         }
 
         public bool EstaAberta()
         {
-            // Considera aberta se as palhetas estão erguidas
             return _persiana.EstaPalhetaErguida();
         }
     }

@@ -41,7 +41,6 @@ namespace Analise_de_Algoritmos_T1.Model.Adapter
         {
             int temperaturaAtual = _arCondicionado.GetTemperatura();
 
-            // Ajusta temperatura gradualmente
             while (temperaturaAtual < temperatura)
             {
                 _arCondicionado.AumentarTemperatura();

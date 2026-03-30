@@ -19,12 +19,12 @@ namespace Analise_de_Algoritmos_T1.Model.Adapter
 
         public void Ligar()
         {
-            _lampada.SetIntensidade(100); // Liga com intensidade máxima
+            _lampada.SetIntensidade(100);
         }
 
         public void Desligar()
         {
-            _lampada.SetIntensidade(0); // Intensidade 0 = desligada
+            _lampada.SetIntensidade(0);
         }
 
         public bool EstaLigada()
