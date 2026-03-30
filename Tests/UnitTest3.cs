@@ -58,7 +58,7 @@ namespace Analise_de_Algoritmos_T1.Tests
             public bool EstaLigado() => Ligado;
         }
 
-        [Fact]
+        [Test]
         public void TestAdicionarDispositivosAoSistema()
         {
             var sistema = new SistemaAutomacao();
@@ -72,12 +72,12 @@ namespace Analise_de_Algoritmos_T1.Tests
             sistema.AdicionarPersiana(persiana);
             sistema.AdicionarArCondicionado(ar);
 
-            Assert.Equals(2, sistema.ObterQuantidadeLampadas());
-            Assert.Equals(1, sistema.ObterQuantidadePersianas());
-            Assert.Equals(1, sistema.ObterQuantidadeArCondicionados());
+            Assert.AreEqual(2, sistema.ObterQuantidadeLampadas());
+            Assert.AreEqual(1, sistema.ObterQuantidadePersianas());
+            Assert.AreEqual(1, sistema.ObterQuantidadeArCondicionados());
         }
 
-        [Fact]
+        [Test]
         public void TestControlarLampadas()
         {
             var sistema = new SistemaAutomacao();
@@ -91,20 +91,20 @@ namespace Analise_de_Algoritmos_T1.Tests
 
             sistema.LigarTodasLampadas();
 
-            Assert.Equals(3, sistema.ObterLampadasLigadas());
+            Assert.AreEqual(3, sistema.ObterLampadasLigadas());
             Assert.True(lampada1.EstaLigada());
             Assert.True(lampada2.EstaLigada());
             Assert.True(lampada3.EstaLigada());
 
             sistema.DesligarTodasLampadas();
 
-            Assert.Equals(0, sistema.ObterLampadasLigadas());
+            Assert.AreEqual(0, sistema.ObterLampadasLigadas());
             Assert.False(lampada1.EstaLigada());
             Assert.False(lampada2.EstaLigada());
             Assert.False(lampada3.EstaLigada());
         }
 
-        [Fact]
+        [Test]
         public void TestControlarPersianaEArCondicionado()
         {
             var sistema = new SistemaAutomacao();
@@ -122,13 +122,13 @@ namespace Analise_de_Algoritmos_T1.Tests
 
             Assert.True(persiana1.EstaAberta());
             Assert.True(persiana2.EstaAberta());
-            Assert.Equals(2, sistema.ObterPerسianasAbertas());
+            Assert.AreEqual(2, sistema.ObterPerسianasAbertas());
 
             sistema.LigarTodosArCondicionados();
 
             Assert.True(ar1.EstaLigado());
             Assert.True(ar2.EstaLigado());
-            Assert.Equals(2, sistema.ObterArCondicionadosLigados());
+            Assert.AreEqual(2, sistema.ObterArCondicionadosLigados());
 
             sistema.DesligarTodosArCondicionados();
             sistema.FecharTodasPersianas();
@@ -139,7 +139,7 @@ namespace Analise_de_Algoritmos_T1.Tests
             Assert.False(persiana2.EstaAberta());
         }
 
-        [Fact]
+        [Test]
         public void TestModoSono()
         {
             var sistema = new SistemaAutomacao();
@@ -167,18 +167,18 @@ namespace Analise_de_Algoritmos_T1.Tests
             sistema.AbrirTodasPersianas();
             sistema.LigarTodosArCondicionados();
 
-            Assert.Equals(2, sistema.ObterLampadasLigadas());
-            Assert.Equals(2, sistema.ObterPerسianasAbertas());
-            Assert.Equals(2, sistema.ObterArCondicionadosLigados());
+            Assert.AreEqual(2, sistema.ObterLampadasLigadas());
+            Assert.AreEqual(2, sistema.ObterPerسianasAbertas());
+            Assert.AreEqual(2, sistema.ObterArCondicionadosLigados());
 
             sistema.AtivarModoSono();
 
-            Assert.Equals(0, sistema.ObterLampadasLigadas());
-            Assert.Equals(0, sistema.ObterPerسianasAbertas());
-            Assert.Equals(0, sistema.ObterArCondicionadosLigados());
+            Assert.AreEqual(0, sistema.ObterLampadasLigadas());
+            Assert.AreEqual(0, sistema.ObterPerسianasAbertas());
+            Assert.AreEqual(0, sistema.ObterArCondicionadosLigados());
         }
 
-        [Fact]
+        [Test]
         public void TestModoTrabalho()
         {
             var sistema = new SistemaAutomacao();
@@ -204,13 +204,13 @@ namespace Analise_de_Algoritmos_T1.Tests
 
             sistema.AtivarModoTrabalho();
 
-            Assert.Equals(2, sistema.ObterLampadasLigadas());
-            Assert.Equals(2, sistema.ObterPerسianasAbertas());
-            Assert.Equals(2, sistema.ObterArCondicionadosLigados());
+            Assert.AreEqual(2, sistema.ObterLampadasLigadas());
+            Assert.AreEqual(2, sistema.ObterPerسianasAbertas());
+            Assert.AreEqual(2, sistema.ObterArCondicionadosLigados());
 
             foreach (var ar in arCondicionados)
             {
-                Assert.Equals(25, ar.ObterTemperatura());
+                Assert.AreEqual(25, ar.ObterTemperatura());
             }
         }
     }
