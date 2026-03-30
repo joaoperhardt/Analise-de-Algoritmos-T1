@@ -78,7 +78,7 @@ namespace Analise_de_Algoritmos_T1
         {
             Console.WriteLine("Estado atual:");
             Console.WriteLine($"  • Lâmpadas ligadas: {sistema.ObterLampadasLigadas()}/{sistema.ObterQuantidadeLampadas()}");
-            Console.WriteLine($"  • Persianas abertas: {sistema.ObterPerسianasAbertas()}/{sistema.ObterQuantidadePersianas()}");
+            Console.WriteLine($"  • Persianas abertas: {sistema.ObterPersianasAbertas()}/{sistema.ObterQuantidadePersianas()}");
             Console.WriteLine($"  • Ar-condicionados ligados: {sistema.ObterArCondicionadosLigados()}/{sistema.ObterQuantidadeArCondicionados()}");
         }
     }
